@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial;
+  /*background: #050b1a;*/
+  background: #5d7cca;
+  color: white;
+}
+section {
+  min-height: 100vh;
+  display: flex;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////MAIN SECTION//////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.container {
+  position:absolute;
+  border: 8px, solid, white;
+  border-radius: 40px;
+  margin: 40px 40px;
+}
+/*//////////////////////////////////////MAIN CONTENT////////////////////////////////////////////////*/
+.main{
+  width: 1250px;
+  height: 500px;
+  padding-top: 100px;
+  padding-left: 40px;
+}
+h1{
+  font-size: 120px;
+}
+.main-description{
+  font-size: 50px;
+  font-style: italic;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////*/
+h2{
+  font-size: 60px;
+}
+.img-main{  
+  position: relative;
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+.about-me{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 370px;
+  height: 300px;
+  right:10px;
+}
+.img-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.contact{
+  width: 370px;
+  height: 160px;
+  right: 10px;
+  top: 340px;
+}
+.proyects{
+  width: 810px;
+  height: 250px;
+  bottom:0px;
+}
+.skills{
+  width: 810px;
+  height: 250px;
+  bottom: 0px;
+  right: 10px;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////NAVBAR///////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  position: sticky;
+  top: 0px;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  z-index: 1000;
+}
+.nav-container{
+  color: #5d7cca;
+  font-size: 28px;
+  border: 9px, solid, white;
+  border-radius: 40px;
+  width: 315px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background: #050b1a;*/
+  background: white;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////ABOUT ME CONT///////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+h5{
+  font-size: 38px;
+}
+.about-me-container {
+  border: 8px solid white;
+  border-radius: 40px;
+  position: relative; 
+  width: 1164px;
+  height: 450px;
+  top: 140px;
+  left: 40px;
+  text-align: center;
+  padding-top: 20px;
+}
+.about-me-habilities {
+  position: absolute;
+  top: -4px;
+  left: 1190px;
+  width: 460px;
+  height: 682px;
+  border: 8px solid white;
+  border-radius: 40px;
+  padding-top: 20px;
+}
+.about-me-formation {
+  position: absolute;
+  top: 480px;
+  left: -5px;
+  width: 850px;
+  height: 200px;
+  border: 8px solid white;
+  border-radius: 40px;
+  padding-top: 20px;
+}
+.about-me-text{
+  padding: 12px;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+.about-me-list{
+  padding-top: 30px;
+  padding-left: 35px;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15 px;
+  font-size: 25px;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////PROYECTS CONT//////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.proyects-container{
+  border: 8px solid white;
+  border-radius: 40px;
+  position: relative; 
+  width: 515px;
+  height: 80px;
+  top: 140px;
+  left: 620px;
+  text-align: center;
+  padding-top: 10px;
+}
+.img-proyects{
+  padding-top: 30px;
+  max-width: 200px;
+  max-height: 200px;
+}
+.proyects-place{
+  padding-top: 20px;
+  font-size: 35px;
+}
+.proyects-title{
+  padding-top: 20px;
+  font-size: 28px;
+}
+.more-view{
+  padding-top: 23px;
+  text-decoration: underline;
+}
+/*/////////////////////////////////////////////MODAL TOOLS///////////////////////////////////////////////////////*/
+.modal{
+  color: white;
+  background-color: #5d7cca;
+  border: 8px solid white;
+  border-radius: 40px;
+  position: relative; 
+  top: -222px;
+  left: -558px;
+  width: 1607px;
+  height: 750px;
+  padding-top: 20px;
+  z-index: 2000;
+}
+.modal-close{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: #5d7cca;
+  background-color: white;
+  border: 8px solid white;
+  border-radius: 0px 0px 0px 30px;
+  text-align: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+}
+.btn-close{
+  font-size: 30px;
+  font-weight:900;
+}
+.img-content{
+  position: absolute;
+  border-radius: 30px;
+  top: 60px;
+  left: 40px;
+  max-width: 500px;
+  max-height: 300px;
+}
+.img-logo-tools{
+  width: 50px;
+  height: 50px;
+}
+.title-tools{
+  position: absolute;
+  font-size: 25px;
+  left: 30px;
+}
+.proyects-list-tools{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style-type: none;
+  position: absolute;
+  right: 40px;
+  top: 60px;
+  border: 8px solid white;
+  border-radius: 40px;
+  width: 350px;
+  height: 630px;
+  text-align: left;
+  padding-left: 85px;
+  padding-top: 40px;
+  font-size: 25px;
+}
+.proyects-content{
+  position: absolute;
+  border: 8px solid white;
+  border-radius: 40px;
+  width: 617px;
+  height: 630px;
+  align-items: center;
+  top:60px;
+  right: 425px;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.proyects-radar{
+  color: white;
+  background-color: #5d7cca;
+  border: 8px solid white;
+  border-radius: 40px;
+  position: absolute; 
+  width: 515px;
+  height: 400px;
+  top: -7px;
+  left: -588px;
+  text-align: center;
+  padding-top: 20px;
+}
+.proyect{
+  border: 8px solid white;
+  border-radius: 40px;
+  position: relative; 
+  width: 650px;
+  height: 80px;
+  top: 370px;
+  right: 80px;
+  text-align: center;
+  padding-top: 10px;
+}

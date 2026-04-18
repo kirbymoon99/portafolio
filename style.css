@@ -64,8 +64,8 @@ h5{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #8a8a8a;
   border-radius: 15px 15px 80px 15px;
+  background-color: #8a8a8a;
   border-color: #8a8a8a;
 }
 .name{
@@ -77,7 +77,7 @@ h5{
   border-radius: 5px;
 }
 .main-description{
-  font-size: clamp(0.7rem, 2.5vw, 1rem);
+  font-size: clamp(0.3rem, 2.5vw, 1rem);
   font-family: 'Press Start 2P', cursive;
   font-style: italic;
   color: #0f380f;
@@ -196,32 +196,61 @@ h5{
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas:
-  'habilities habilities habilities about-me-list'
-  'habilities habilities habilities about-me-list'
-  'habilities habilities habilities about-me-list'
-  'formation formation logo about-me-list';
+  'about-main about-main about-main habilities'
+  'about-main about-main about-main habilities'
+  'about-main about-main about-main habilities'
+  'formation formation . habilities';
   
   gap: 20px;
   width: 100%;
+  height: 100vh;
+  padding: 8% 4% 2% 4%;
 }
-.about-me-habilities {
-  grid-area: habilities;
+h5{
+  text-align: center;
+}
+.about-me-main{
+  grid-area: about-main;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 10px;
+  background-color: #8a8a8a;
+  border-color: #8a8a8a;
+  color: #302058;
 }
 .about-me-formation {
   grid-area: formation;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #8a8a8a;
+  border-color: #8a8a8a;
+  color: #302058;
+}
+.about-me-habilities {
+  grid-area: habilities;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #8a8a8a;
+  border-color: #8a8a8a;
+  color: #302058;
+  gap: 20px;
 }
 .about-me-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 12%;
+  gap: 20px;
 }
 .about-me-text{
-  padding: 12px;
-  font-size: 20px;
-  letter-spacing: 0.5px;
+
+}
+.title-about-me{
+  font-size: clamp(1rem, 6vw, 2.5rem);
 }
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////PROYECTS CONT//////////////////////////////////////////////////////////////*/
@@ -356,3 +385,28 @@ h5{
   padding-top: 10px;
 }
 /*////////////////////////////////*/
+.blink{
+  animation: blink-custom 5s infinite;
+}
+
+@keyframes blink-custom {
+  0% { opacity: 1; }
+  1% { opacity: 0; }
+  2% { opacity: 1; }
+  3% { opacity: 0; }
+  4% { opacity: 1; }
+  5% { opacity: 0; }
+  6% { opacity: 1; }
+  9% { opacity: 0; }
+  12% { opacity: 1; }
+  15% { opacity: 0; }
+  20% { opacity: 1; }
+
+  30% { opacity: 0; }
+  35% { opacity: 1; }
+
+  40% { opacity: 0; }
+  45% { opacity: 1; }
+
+  100% { opacity: 1; }
+}

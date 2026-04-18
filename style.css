@@ -114,11 +114,9 @@ h2{
 }
 .nav-container{
   color: #5d7cca;
-  font-size: 28px;
-  width: 315px;
-  height: 75px;
-  align-items: center;
+  font-size: clamp(1rem, 2.5vw, 2rem);
   background: white;
+  text-align: center;
 }
 .btnmain{
   grid-area: btnmain;

@@ -98,10 +98,10 @@ h2{
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .navbar-grid {
   display: flex;
-  grid-auto-flow: row;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
   gap: 20px;
   position: sticky;
-  padding: 2.4%;
   top: 0px;
   z-index: 1000;
 }

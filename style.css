@@ -300,16 +300,3 @@ h5{
   padding-top: 10px;
 }
 /*////////////////////////////////*/
-@media (max-width: 768px) {
-  section {
-    padding: 20px 10px;
-  }
-
-  .container-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .container {
-    padding: 15px;
-  }
-}

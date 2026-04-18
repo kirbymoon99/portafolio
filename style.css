@@ -33,7 +33,7 @@ h2{
   border: 8px solid white;
   border-radius: 40px;
 }
-.container-grid{
+.maincontainer-grid{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -96,29 +96,23 @@ h2{
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////NAVBAR///////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
-.navbar {
+.navbar-grid {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  grid-auto-flow: row;
   gap: 20px;
   position: sticky;
+  padding: 2.4%;
   top: 0px;
-  padding-top: 30px;
-  padding-bottom: 0px;
   z-index: 1000;
 }
 .nav-container{
   color: #5d7cca;
   font-size: 28px;
-  border: 9px, solid, white;
-  border-radius: 40px;
   width: 315px;
   height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background: #050b1a;*/
   background: white;
 }
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/

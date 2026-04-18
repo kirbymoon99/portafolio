@@ -9,8 +9,7 @@ html{
 }
 body {
   font-family: Arial;
-  /*background: #050b1a;*/
-  background: #5d7cca;
+  background: #cfd3c1;
   color: white;
 }
 section {
@@ -21,10 +20,15 @@ a{
   text-decoration: none;
 }
 h1{
-  font-size: clamp(2rem, 6vw, 6rem);
+  font-size: clamp(1rem, 6vw, 2.5rem);
+  font-family: 'Press Start 2P', cursive;
+  color: #0f380f;
 }
 h2{
-  font-size: clamp(1rem, 6vw, 4rem);
+  font-size: clamp(0.5rem, 6vw, 2rem);
+}
+h5{
+  font-size: clamp(1rem, 4vw, 4rem);
 }
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////MAIN SECTION//////////////////////////////////////////////////*/
@@ -35,64 +39,98 @@ h2{
 }
 .maincontainer-grid{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   grid-template-areas:
-  'main main main about-me'
-  'main main main contact'
-  'proyects proyects skills skills';
+  '. main main main main main main .'
+  '. main main main main main main .'
+  '. main main main main main main .'
+  '. main main main main main main .' 
+  '. main main main main main main .'
+  '. portfolio portfolio portfolio . . . .'
+  '. proyects proyects . . . contact contact'
+  '. proyects proyects . about-me about-me contact contact'
+  '. skills skills . about-me about-me . .'
+  '. skills skills . . . . .';
 
   gap: 20px;
   width: 100%;
   height: 100vh;
-  padding: 2%;
+  padding: 4%;
 }
 .main{
   grid-area: main;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 7%;
+  align-items: center;
+  background-color: #8a8a8a;
+  border-radius: 15px 15px 80px 15px;
+  border-color: #8a8a8a;
+}
+.name{
+  width: 50%;
+  height: 85%;
+  background-color: #58DE8D;
+  text-align: center;
+  padding-top: 5%;
+  border-radius: 5px;
 }
 .main-description{
-  font-size: clamp(1.2rem, 2.5vw, 2.5rem);
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
+  font-family: 'Press Start 2P', cursive;
   font-style: italic;
+  color: #0f380f;
+}
+.portfolio{
+  grid-area: portfolio;
+  color: #302058;
 }
 .about-me{
   grid-area: about-me;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: clamp(100px, 18vw, 200px); 
+  background-color: #8b0d3d;
+  border-color: #8b0d3d;
+  color: #cfd3c1;
 }
 .contact{
   grid-area: contact;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  border-radius: 50%; 
+  aspect-ratio: 1;
+  width: clamp(100px, 18vw, 200px); 
+  background-color: #8b0d3d;
+  border-color: #8b0d3d;
+  color: #cfd3c1;
 }
 .proyects{
   grid-area: proyects;
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: center;
+  background-color: #323232;
+  border-color: #323232;
+  border-radius: 6px;
+  color: #cfd3c1;
 }
 .skills{
   grid-area: skills;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.img-main{  
-  width: clamp(20px, 3vw, 100px);
-}
-.img-row{
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: row;
-  gap: 20px;
+  justify-content: center;
+  background-color: #323232;
+  border-color:#323232;
+  border-radius: 6px;
+  color: #cfd3c1;
 }
+
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////NAVBAR///////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -102,8 +140,7 @@ h2{
   grid-template-rows: repeat(1, 1fr);
   grid-template-areas:
   'btnmain btnabout-me btnproyects btnskills btncontact';
-
-  gap: 10px;
+  gap: 20px;
   width: 100%;
   padding: 2%;
   position: sticky;
@@ -113,10 +150,13 @@ h2{
   padding-right: 2%;
 }
 .nav-container{
-  color: #5d7cca;
+  background-color: #8b0d3d;
+  border-color: #8b0d3d;
+  color: #cfd3c1;
   font-size: clamp(1rem, 2.5vw, 2rem);
-  background: white;
   text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 .btnmain{
   grid-area: btnmain;
@@ -151,54 +191,37 @@ h2{
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////ABOUT ME CONT///////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
-h5{
-  font-size: 38px;
-}
-.about-me-container {
-  border: 8px solid white;
-  border-radius: 40px;
-  position: relative; 
-  width: 1164px;
-  height: 450px;
-  top: 140px;
-  left: 40px;
-  text-align: center;
-  padding-top: 20px;
+.about-me-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+  'habilities habilities habilities about-me-list'
+  'habilities habilities habilities about-me-list'
+  'habilities habilities habilities about-me-list'
+  'formation formation logo about-me-list';
+  
+  gap: 20px;
+  width: 100%;
 }
 .about-me-habilities {
-  position: absolute;
-  top: -4px;
-  left: 1190px;
-  width: 460px;
-  height: 682px;
-  border: 8px solid white;
-  border-radius: 40px;
-  padding-top: 20px;
+  grid-area: habilities;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .about-me-formation {
-  position: absolute;
-  top: 480px;
-  left: -5px;
-  width: 850px;
-  height: 200px;
-  border: 8px solid white;
-  border-radius: 40px;
-  padding-top: 20px;
+  grid-area: formation;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-me-list{
 }
 .about-me-text{
   padding: 12px;
   font-size: 20px;
   letter-spacing: 0.5px;
-}
-.about-me-list{
-  padding-top: 30px;
-  padding-left: 35px;
-  display: flex;
-  text-align: left;
-  flex-direction: column;
-  gap: 20px;
-  padding: 15px;
-  font-size: 25px;
 }
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////PROYECTS CONT//////////////////////////////////////////////////////////////*/

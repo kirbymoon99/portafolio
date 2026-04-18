@@ -97,10 +97,15 @@ h2{
 /*////////////////////////////////////////////NAVBAR///////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .navbar-grid {
-  display: flex;
-  justify-content: space-between; /* 🔥 clave */
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas:
+  'btnmain btnabout-me btnproyects btnskills btncontact';
+
   gap: 10px;
+  width: 100%;
+  padding: 2%;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -112,10 +117,38 @@ h2{
   font-size: 28px;
   width: 315px;
   height: 75px;
-  display: flex;
-  justify-content: center;
   align-items: center;
   background: white;
+}
+.btnmain{
+  grid-area: btnmain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.btnabout-me{
+  grid-area: btnabout-me;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.btnproyects{
+  grid-area: btnproyects;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.btnskills{
+  grid-area: btnskills;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.btncontact{
+  grid-area: btncontact;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////ABOUT ME CONT///////////////////////////////////////////////////////////*/

@@ -98,12 +98,14 @@ h2{
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .navbar-grid {
   display: flex;
-  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between; /* 🔥 clave */
   width: 100%;
-  gap: 20px;
+  gap: 10px;
   position: sticky;
-  top: 0px;
+  top: 0;
   z-index: 1000;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 .nav-container{
   color: #5d7cca;

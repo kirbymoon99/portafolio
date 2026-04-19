@@ -20,12 +20,12 @@ a{
   text-decoration: none;
 }
 h1{
-  font-size: clamp(1rem, 6vw, 2.5rem);
+  font-size: clamp(0.25rem, 3.5vw, 2.5rem);
   font-family: 'Press Start 2P', cursive;
   color: #0f380f;
 }
 h2{
-  font-size: clamp(0.5rem, 6vw, 2rem);
+  font-size: clamp(0.1rem, 2.3vw, 1.7rem);
 }
 h5{
   font-size: clamp(1rem, 4vw, 4rem);
@@ -47,7 +47,7 @@ h5{
   '. main main main main main main .'
   '. main main main main main main .' 
   '. main main main main main main .'
-  '. portfolio portfolio portfolio . . . .'
+  '. portfolio portfolio portfolio portfolio portfolio . .'
   '. proyects proyects . . . contact contact'
   '. proyects proyects . about-me about-me contact contact'
   '. skills skills . about-me about-me . .'
@@ -77,10 +77,11 @@ h5{
   border-radius: 5px;
 }
 .main-description{
-  font-size: clamp(0.3rem, 2.5vw, 1rem);
+  font-size: clamp(0.1rem, 2.5vw, 1rem);
   font-family: 'Press Start 2P', cursive;
   font-style: italic;
   color: #0f380f;
+  gap: 20px;
 }
 .portfolio{
   grid-area: portfolio;
@@ -130,7 +131,9 @@ h5{
   border-radius: 6px;
   color: #cfd3c1;
 }
-
+.portfolio-name{
+  font-size: clamp(0.3rem, 3vw, 2rem);
+}
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////NAVBAR///////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -218,21 +221,26 @@ h5{
   background-color: #8a8a8a;
   border-color: #8a8a8a;
   color: #302058;
+  gap: 10px;
 }
 .about-me-formation {
   grid-area: formation;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  border-radius: 10px;
   background-color: #8a8a8a;
   border-color: #8a8a8a;
   color: #302058;
+  gap: 10px;
 }
 .about-me-habilities {
   grid-area: habilities;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 10px;
   background-color: #8a8a8a;
   border-color: #8a8a8a;
   color: #302058;
@@ -243,11 +251,15 @@ h5{
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  padding-left: 12%;
+  padding-left: 8%;
   gap: 20px;
+  font-size: clamp(0.3rem, 2.5vw, 1.3rem);
 }
 .about-me-text{
-
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: clamp(0.3rem, 2.5vw, 1.3rem);
 }
 .title-about-me{
   font-size: clamp(1rem, 6vw, 2.5rem);

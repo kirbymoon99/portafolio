@@ -48,10 +48,10 @@ h5{
   '. main main main main main main .' 
   '. main main main main main main .'
   '. portfolio portfolio portfolio portfolio portfolio . .'
-  '. proyects proyects . . . contact contact'
+  '. . . . . . contact contact'
   '. proyects proyects . about-me about-me contact contact'
   '. skills skills . about-me about-me . .'
-  '. skills skills . . . . .';
+  '. . . . . . . .';
 
   gap: 20px;
   width: 100%;
@@ -94,7 +94,7 @@ h5{
   align-items: center;
   border-radius: 50%;
   aspect-ratio: 1;
-  width: clamp(100px, 18vw, 200px); 
+  width: clamp(60px, 10vw, 155px); 
   background-color: #8b0d3d;
   border-color: #8b0d3d;
   color: #cfd3c1;
@@ -106,7 +106,7 @@ h5{
   align-items: center;
   border-radius: 50%; 
   aspect-ratio: 1;
-  width: clamp(100px, 18vw, 200px); 
+  width: clamp(60px, 10vw, 155px); 
   background-color: #8b0d3d;
   border-color: #8b0d3d;
   color: #cfd3c1;
@@ -116,6 +116,7 @@ h5{
   display: flex;
   align-items: center;
   justify-content: center;
+  height: clamp(10px, 10vw, 30px); 
   background-color: #323232;
   border-color: #323232;
   border-radius: 6px;
@@ -126,6 +127,7 @@ h5{
   display: flex;
   align-items: center;
   justify-content: center;
+  height: clamp(10px, 10vw, 30px); 
   background-color: #323232;
   border-color:#323232;
   border-radius: 6px;
@@ -217,23 +219,24 @@ h5{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   border-radius: 10px;
   background-color: #8a8a8a;
   border-color: #8a8a8a;
   color: #302058;
-  gap: 10px;
+  gap: 20px;
 }
 .about-me-formation {
   grid-area: formation;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   background-color: #8a8a8a;
   border-color: #8a8a8a;
   color: #302058;
-  gap: 10px;
+  gap: 30px;
 }
 .about-me-habilities {
   grid-area: habilities;
@@ -245,13 +248,14 @@ h5{
   border-color: #8a8a8a;
   color: #302058;
   gap: 20px;
+  padding: 1%;
 }
 .about-me-list{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
-  padding-left: 8%;
+  align-items: center;
+  text-align: center;
   gap: 20px;
   font-size: clamp(0.3rem, 2.5vw, 1.3rem);
 }
@@ -260,23 +264,16 @@ h5{
   text-align: center;
   justify-content: center;
   font-size: clamp(0.3rem, 2.5vw, 1.3rem);
+  padding: 2%;
 }
 .title-about-me{
-  font-size: clamp(1rem, 6vw, 2.5rem);
+  font-size: clamp(1rem, 3vw, 2.5rem);
 }
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////PROYECTS CONT//////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .proyects-container{
-  border: 8px solid white;
-  border-radius: 40px;
-  position: relative; 
-  width: 515px;
-  height: 80px;
-  top: 140px;
-  left: 620px;
-  text-align: center;
-  padding-top: 10px;
+  
 }
 .img-proyects{
   padding-top: 30px;

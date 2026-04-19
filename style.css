@@ -224,7 +224,8 @@ h5{
   background-color: #8a8a8a;
   border-color: #8a8a8a;
   color: #302058;
-  gap: 20px;
+  gap: 10px;
+  padding-top: 2%;
 }
 .about-me-formation {
   grid-area: formation;
@@ -236,7 +237,8 @@ h5{
   background-color: #8a8a8a;
   border-color: #8a8a8a;
   color: #302058;
-  gap: 30px;
+  gap: 10px;
+  padding-top: 2%;
 }
 .about-me-habilities {
   grid-area: habilities;
@@ -247,7 +249,7 @@ h5{
   background-color: #8a8a8a;
   border-color: #8a8a8a;
   color: #302058;
-  gap: 20px;
+  gap: 10px;
   padding: 1%;
 }
 .about-me-list{
@@ -257,14 +259,15 @@ h5{
   align-items: center;
   text-align: center;
   gap: 20px;
-  font-size: clamp(0.3rem, 2.5vw, 1.3rem);
+  font-size: clamp(0.3rem, 2.5vw, 1rem);
+  list-style: none;
 }
 .about-me-text{
   display: flex;
   text-align: center;
   justify-content: center;
-  font-size: clamp(0.3rem, 2.5vw, 1.3rem);
-  padding: 2%;
+  font-size: clamp(0.3rem, 2.5vw, 1rem);
+  padding: 1%;
 }
 .title-about-me{
   font-size: clamp(1rem, 3vw, 2.5rem);

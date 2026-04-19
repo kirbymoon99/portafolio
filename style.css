@@ -270,8 +270,8 @@ h5{
     background:
     linear-gradient(to top, #484d3f 0%, transparent 7%),
     linear-gradient(to bottom, #484d3f 0%, transparent 7%),
-    linear-gradient(to left, #484d3f 0%, transparent 3%),
-    linear-gradient(to right, #484d3f 0%, transparent 3%),
+    linear-gradient(to left, #484d3f 0%, transparent 10%),
+    linear-gradient(to right, #484d3f 0%, transparent 10%),
     #9ca18d ;
   color: #302058;
   gap: 10px;
@@ -286,10 +286,10 @@ h5{
   background-color: #8a8a8a;
   border-color: #8a8a8a;
     background:
-    linear-gradient(to top, #484d3f 0%, transparent 7%),
-    linear-gradient(to bottom, #484d3f 0%, transparent 7%),
-    linear-gradient(to left, #484d3f 0%, transparent 3%),
-    linear-gradient(to right, #484d3f 0%, transparent 3%),
+    linear-gradient(to top, #484d3f 0%, transparent 6%),
+    linear-gradient(to bottom, #484d3f 0%, transparent 6%),
+    linear-gradient(to left, #484d3f 0%, transparent 10%),
+    linear-gradient(to right, #484d3f 0%, transparent 10%),
     #9ca18d ;
   color: #302058;
   gap: 10px;
@@ -318,24 +318,88 @@ h5{
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////PROYECTS CONT//////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
-.proyects-container{
-  
+.proyects-grid{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+  'radar radar radar devs devs devs devs mapfids mapfids mapfids'
+  'radar radar radar virtmap virtmap virtmap virtmap mapfids mapfids mapfids'
+  'radar radar radar virtmap virtmap virtmap virtmap mapfids mapfids mapfids'
+  'armrobot armrobot armrobot proyect proyect proyect proyect general  general general '
+  'armrobot armrobot armrobot carctrhand carctrhand car car general general general'
+  'armrobot armrobot armrobot carctrhand carctrhand car car general general general';
+  gap: 10px;
+  width: 100%;
+  height: 100vh;
+  padding: 8% 4% 2% 4%;
 }
-.img-proyects{
-  padding-top: 30px;
-  max-width: 200px;
-  max-height: 200px;
+.devs{
+  grid-area: devs;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #8a8a8a;
+  border-color: #8a8a8a;
+}
+.radar{
+  grid-area: radar;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.virtmap{
+  grid-area: virtmap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mapfids{
+  grid-area: mapfids;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.proyect-tit{
+  grid-area: proyect;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.armrobot{
+  grid-area: armrobot;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.carctrhand{
+  grid-area: carctrhand;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.car{
+  grid-area: car;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.general{
+  grid-area: general;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .proyects-place{
-  padding-top: 20px;
-  font-size: 35px;
+  font-size: 3px;
 }
 .proyects-title{
-  padding-top: 20px;
-  font-size: 28px;
+  font-size: 3px;
 }
 .more-view{
-  padding-top: 23px;
+  padding-top: 3px;
   text-decoration: underline;
 }
 /*/////////////////////////////////////////////MODAL TOOLS///////////////////////////////////////////////////////*/

@@ -9,14 +9,21 @@ html{
 }
 body {
   font-family: Arial;
-  background: #cfd3c1;
-  color: white;
+  background:black;
 }
 section {
   min-height: 100vh;
+  background: radial-gradient(
+  circle,
+  #cfd3c1 0%,
+  #969e7d 85%,
+  #363a2d 100%
+  );
+}
+nav{
+ background: transparent;
 }
 a{
-  color: white;
   text-decoration: none;
 }
 h1{
@@ -65,13 +72,24 @@ h5{
   justify-content: center;
   align-items: center;
   border-radius: 15px 15px 80px 15px;
-  background-color: #8a8a8a;
-  border-color: #8a8a8a;
+    background: radial-gradient(
+    circle,
+    #8a8a8a 0%,
+    #535353 85%,
+    #404040 100%
+    );
 }
 .name{
   width: 50%;
   height: 85%;
-  background-color: #58DE8D;
+  aspect-ratio: 1 / 1;
+  background: radial-gradient(
+    circle,
+    #88edb0 0%,
+    #18a14f 85%,
+    #176437 100%
+    );
+  box-shadow: 0 0 15px #88edb0;
   text-align: center;
   padding-top: 5%;
   border-radius: 5px;
@@ -94,10 +112,11 @@ h5{
   align-items: center;
   border-radius: 50%;
   aspect-ratio: 1;
-  width: clamp(60px, 10vw, 155px); 
+  width: clamp(70px, 10vw, 170px); 
   background-color: #8b0d3d;
   border-color: #8b0d3d;
   color: #cfd3c1;
+  box-shadow: 13px 4px 6px #29191e;
 }
 .contact{
   grid-area: contact;
@@ -110,6 +129,7 @@ h5{
   background-color: #8b0d3d;
   border-color: #8b0d3d;
   color: #cfd3c1;
+  box-shadow: 13px 4px 6px #29191e;
 }
 .proyects{
   grid-area: proyects;
@@ -121,6 +141,7 @@ h5{
   border-color: #323232;
   border-radius: 6px;
   color: #cfd3c1;
+  box-shadow: 8px 10px 4px #272727;
 }
 .skills{
   grid-area: skills;
@@ -132,6 +153,7 @@ h5{
   border-color:#323232;
   border-radius: 6px;
   color: #cfd3c1;
+  box-shadow: 8px 10px 4px #272727;
 }
 .portfolio-name{
   font-size: clamp(0.3rem, 3vw, 2rem);
@@ -153,11 +175,13 @@ h5{
   z-index: 1000;
   padding-left: 2%;
   padding-right: 2%;
+   background: transparent;
 }
 .nav-container{
   background-color: #8b0d3d;
   border-color: #8b0d3d;
   color: #cfd3c1;
+  box-shadow: 7px 8px 6px #29191e;
   font-size: clamp(1rem, 2.5vw, 2rem);
   text-align: center;
   padding-top: 3%;
@@ -223,6 +247,13 @@ h5{
   border-radius: 10px;
   background-color: #8a8a8a;
   border-color: #8a8a8a;
+  background:
+    linear-gradient(to top, #484d3f 0%, transparent 7%),
+    linear-gradient(to bottom, #484d3f 0%, transparent 7%),
+    linear-gradient(to left, #484d3f 0%, transparent 3%),
+    linear-gradient(to right, #484d3f 0%, transparent 3%),
+    #9ca18d ;
+  box-shadow: 0 0 10px #969e7d;
   color: #302058;
   gap: 10px;
   padding-top: 2%;
@@ -236,6 +267,12 @@ h5{
   border-radius: 10px;
   background-color: #8a8a8a;
   border-color: #8a8a8a;
+    background:
+    linear-gradient(to top, #484d3f 0%, transparent 7%),
+    linear-gradient(to bottom, #484d3f 0%, transparent 7%),
+    linear-gradient(to left, #484d3f 0%, transparent 3%),
+    linear-gradient(to right, #484d3f 0%, transparent 3%),
+    #9ca18d ;
   color: #302058;
   gap: 10px;
   padding-top: 2%;
@@ -248,6 +285,12 @@ h5{
   border-radius: 10px;
   background-color: #8a8a8a;
   border-color: #8a8a8a;
+    background:
+    linear-gradient(to top, #484d3f 0%, transparent 7%),
+    linear-gradient(to bottom, #484d3f 0%, transparent 7%),
+    linear-gradient(to left, #484d3f 0%, transparent 3%),
+    linear-gradient(to right, #484d3f 0%, transparent 3%),
+    #9ca18d ;
   color: #302058;
   gap: 10px;
   padding: 1%;

@@ -20,6 +20,9 @@ section {
   #363a2d 100%
   );
 }
+.sec-game{
+  min-height: 200vh;
+}
 nav{
  background: transparent;
 }
@@ -28,36 +31,62 @@ a{
 }
 h1{
   font-size: clamp(0.25rem, 3.5vw, 2.5rem);
-  font-family: 'Press Start 2P', cursive;
-  color: #0f380f;
 }
 h2{
-  font-size: clamp(0.1rem, 2.3vw, 1.7rem);
+  font-size: clamp(0.1rem, 2.3vw, 1.5rem);
 }
 h5{
   font-size: clamp(1rem, 4vw, 4rem);
 }
+.letter{
+  font-family: 'Press Start 2P', cursive;
+  color: #0f380f;
+}
+.btn-grey{
+  height: clamp(10px, 10vw, 30px); 
+    background: radial-gradient(circle,
+    #505050 0%,
+    #434343 10%,
+    #292929 60%,
+    #1a1a1a 100%
+    );
+  border-radius: 6px;
+  color: #cfd3c1;
+  box-shadow: 5px 7px 4px #272727;
+}
+.btn-mag{
+  background: linear-gradient(110deg,
+    #db2565 0%,
+    #8b0d3d 40%,
+    #300212 100%
+    );
+  color: #cfd3c1;
+  box-shadow: 13px 5px 6px #29191e;
+}
+.flexG{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////MAIN SECTION//////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
-.container {
-  border: 8px solid white;
-  border-radius: 40px;
-}
 .maincontainer-grid{
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   grid-template-areas:
+  '. main main main main main main .'
+  '. main main main main main main .'
   '. main main main main main main .'
   '. main main main main main main .'
   '. main main main main main main .'
   '. main main main main main main .' 
   '. main main main main main main .'
   '. portfolio portfolio portfolio portfolio portfolio . .'
-  '. . . . . . contact contact'
-  '. proyects proyects . about-me about-me contact contact'
-  '. skills skills . about-me about-me . .'
+  '. . . . . . contact .'
+  '. proyects proyects . about-me . contact .'
+  '. skills skills . about-me . . .'
   '. . . . . . . .';
 
   gap: 20px;
@@ -67,42 +96,38 @@ h5{
 }
 .main{
   grid-area: main;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   border-radius: 15px 15px 80px 15px;
     background: radial-gradient(
     circle,
-    #8a8a8a 0%,
+    #979797 0%,
     #535353 85%,
     #404040 100%
     );
+  box-shadow: inset -1px -1px 5px 1px #999999, 0px 0px 4px 3px #242424;
 }
 .name{
+  align-items: center;
+  justify-content: center;  
+  text-align: center;
   width: 50%;
   height: 85%;
   aspect-ratio: 1 / 1;
   background: radial-gradient(
     circle,
-    #88edb0 0%,
-    #18a14f 85%,
-    #176437 100%
+    #50e742 0%,
+    #136817 85%,
+    #145831 100%
     );
   box-shadow: 0 0 15px #88edb0;
-  text-align: center;
-  padding-top: 5%;
   border-radius: 5px;
 }
 .main-description{
   font-size: clamp(0.1rem, 2.5vw, 1rem);
-  font-family: 'Press Start 2P', cursive;
-  font-style: italic;
-  color: #0f380f;
-  gap: 20px;
 }
 .portfolio{
   grid-area: portfolio;
+  font-style: italic;
   color: #302058;
 }
 .about-me{
@@ -112,11 +137,7 @@ h5{
   align-items: center;
   border-radius: 50%;
   aspect-ratio: 1;
-  width: clamp(70px, 10vw, 170px); 
-  background-color: #8b0d3d;
-  border-color: #8b0d3d;
-  color: #cfd3c1;
-  box-shadow: 13px 4px 6px #29191e;
+  width: clamp(70px, 10vw, 180px); 
 }
 .contact{
   grid-area: contact;
@@ -126,34 +147,19 @@ h5{
   border-radius: 50%; 
   aspect-ratio: 1;
   width: clamp(60px, 10vw, 155px); 
-  background-color: #8b0d3d;
-  border-color: #8b0d3d;
-  color: #cfd3c1;
-  box-shadow: 13px 4px 6px #29191e;
 }
 .proyects{
   grid-area: proyects;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: clamp(10px, 10vw, 30px); 
-  background-color: #323232;
-  border-color: #323232;
-  border-radius: 6px;
-  color: #cfd3c1;
-  box-shadow: 8px 10px 4px #272727;
+
 }
 .skills{
   grid-area: skills;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: clamp(10px, 10vw, 30px); 
-  background-color: #323232;
-  border-color:#323232;
-  border-radius: 6px;
-  color: #cfd3c1;
-  box-shadow: 8px 10px 4px #272727;
 }
 .portfolio-name{
   font-size: clamp(0.3rem, 3vw, 2rem);
@@ -175,12 +181,10 @@ h5{
   z-index: 1000;
   padding-left: 2%;
   padding-right: 2%;
-   background: transparent;
+  background: transparent;
 }
 .nav-container{
-  background-color: #8b0d3d;
-  border-color: #8b0d3d;
-  color: #cfd3c1;
+  border-radius: 40px;
   box-shadow: 7px 8px 6px #29191e;
   font-size: clamp(1rem, 2.5vw, 2rem);
   text-align: center;
@@ -220,6 +224,10 @@ h5{
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////ABOUT ME CONT///////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.sticker{
+  border: 1px solid gray;
+  gap: 10px;
+}
 .about-me-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -244,56 +252,69 @@ h5{
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  border-radius: 10px;
-  background-color: #8a8a8a;
-  border-color: #8a8a8a;
-  background:
-    linear-gradient(to top, #484d3f 0%, transparent 7%),
-    linear-gradient(to bottom, #484d3f 0%, transparent 7%),
-    linear-gradient(to left, #484d3f 0%, transparent 3%),
-    linear-gradient(to right, #484d3f 0%, transparent 3%),
-    #9ca18d ;
-  box-shadow: 0 0 10px #969e7d;
-  color: #302058;
-  gap: 10px;
-  padding-top: 2%;
+  border-right: black;
+  border-bottom: black;
+  border-radius: 0px 40% 20% 0px;
+  box-shadow: inset -25px 0px 7px #271b20, 12px 4px 6px black;
+background:
+  radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), transparent 45%),
+  conic-gradient(
+    from 0deg,
+    #d48aa8,
+    #d9c3a5,
+    #b7d3b0,
+    #a8d6db,
+    #aabfe0,
+    #c3b6d9,
+    #d9b6d3,
+    #f0eee9,
+    #d9b3b3,
+    #d48aa8
+  );
 }
 .about-me-formation {
   grid-area: formation;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  background-color: #8a8a8a;
-  border-color: #8a8a8a;
-    background:
-    linear-gradient(to top, #484d3f 0%, transparent 7%),
-    linear-gradient(to bottom, #484d3f 0%, transparent 7%),
-    linear-gradient(to left, #484d3f 0%, transparent 10%),
-    linear-gradient(to right, #484d3f 0%, transparent 10%),
-    #9ca18d ;
-  color: #302058;
-  gap: 10px;
-  padding-top: 2%;
+  box-shadow: inset 1px 0px 10px #3f2c35, 1px 1px 2px 0.5px black;
+background:
+  radial-gradient(circle at 70% 60%, rgba(255,255,255,0.28), transparent 50%),
+  conic-gradient(
+    from 120deg,
+    #c98ca4,
+    #d6c0a0,
+    #aecfaa,
+    #9fd0d6,
+    #9fb6db,
+    #bcaed4,
+    #d4aecb,
+    #ebe8e2,
+    #d4aaaa,
+    #c98ca4
+  );
 }
 .about-me-habilities {
   grid-area: habilities;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 10px;
-  background-color: #8a8a8a;
-  border-color: #8a8a8a;
-    background:
-    linear-gradient(to top, #484d3f 0%, transparent 6%),
-    linear-gradient(to bottom, #484d3f 0%, transparent 6%),
-    linear-gradient(to left, #484d3f 0%, transparent 10%),
-    linear-gradient(to right, #484d3f 0%, transparent 10%),
-    #9ca18d ;
-  color: #302058;
-  gap: 10px;
-  padding: 1%;
+  box-shadow: inset 1px 0px 10px #3f2c35, 0px 0px 2px 0.5px black;
+  background:
+  radial-gradient(circle at 40% 75%, rgba(255,255,255,0.30), transparent 50%),
+  conic-gradient(
+    from 240deg,
+    #c58fa8,
+    #d2bfa3,
+    #b2caaa,
+    #a3cdd2,
+    #a5b9d8,
+    #bfb2d2,
+    #d2b2c8,
+    #e9e6df,
+    #d2a8a8,
+    #c58fa8
+  );
 }
 .about-me-list{
   display: flex;
@@ -307,10 +328,12 @@ h5{
 }
 .about-me-text{
   display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
+  align-items: center;
   font-size: clamp(0.3rem, 2.5vw, 1rem);
-  padding: 1%;
+  padding: 0.5%;
 }
 .title-about-me{
   font-size: clamp(1rem, 3vw, 2.5rem);
@@ -321,33 +344,82 @@ h5{
 .proyects-grid{
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   grid-template-areas:
-  'radar radar radar devs devs devs devs mapfids mapfids mapfids'
-  'radar radar radar virtmap virtmap virtmap virtmap mapfids mapfids mapfids'
-  'radar radar radar virtmap virtmap virtmap virtmap mapfids mapfids mapfids'
+  '. . . devs devs devs devs . . .'
+  'radar radar radar radar radar mapfids mapfids mapfids mapfids mapfids'
+  'radar radar radar radar radar mapfids mapfids mapfids mapfids mapfids'
+  'radar radar radar radar radar mapfids mapfids mapfids mapfids mapfids'
+  'radar radar radar radar radar mapfids mapfids mapfids mapfids mapfids'
   'armrobot armrobot armrobot proyect proyect proyect proyect general  general general '
   'armrobot armrobot armrobot carctrhand carctrhand car car general general general'
   'armrobot armrobot armrobot carctrhand carctrhand car car general general general';
   gap: 10px;
   width: 100%;
-  height: 100vh;
+  height: 200vh;
   padding: 8% 4% 2% 4%;
+}
+.game{
+  display: block;
+  height: 100px;
+  width: 100px;
 }
 .devs{
   grid-area: devs;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 10px;
-  background-color: #8a8a8a;
-  border-color: #8a8a8a;
 }
 .radar{
   grid-area: radar;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas:
+  '. name-game name-game name-game name-game name-game name-game .' 
+  '. name-game name-game name-game name-game name-game name-game .' 
+  '. img-game img-game img-game img-game img-game img-game .'
+  '. img-game img-game img-game img-game img-game img-game .'
+  '. img-game img-game img-game img-game img-game img-game .'
+  '. img-game img-game img-game img-game img-game img-game .'
+  '. img-game img-game img-game img-game img-game img-game .'
+  '. . . . . . . .';
+    gap: 20px;
+    width: 100%;
+    padding: 8% 4% 2% 4%;
+  background:
+    linear-gradient(to top, #0b0f47 0%, transparent 90%),
+    linear-gradient(to bottom, #1b2285 0%, transparent 5%),
+    linear-gradient(to left, #0e1358 0%, transparent 80%),
+    linear-gradient(to right, #1b2285 0%, transparent 5%),
+    #131d79; /* color base */
+    border-radius: 10px;
+}
+.img-game{
+  grid-area: img-game;
+  width: 100%;
+  height: 100%; /* 👈 importante */
+  display: flex;
+  box-shadow: 0 0 5px 7px #030425;
+}
+.img-game img{
+  width: 100%;
+  height: 100%;
+  display: block; /* quita espacios raros */
+}
+.name-game{
+  grid-area: name-game;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 50px;
+    background:
+    linear-gradient(to bottom, #0e1358 0%, transparent 80%),
+    linear-gradient(to top, #1b2285 0%, transparent 10%),
+    linear-gradient(to right, #0e1358 0%, transparent 30%),
+    linear-gradient(to left, #1b2285 0%, transparent 10%),
+    #131d79;
+  box-shadow: inset 6px 10px 20px 5px #030425, 2px 1px 7px 1px #171e7e;
 }
 .virtmap{
   grid-area: virtmap;

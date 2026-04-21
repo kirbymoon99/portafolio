@@ -19,9 +19,10 @@ section {
   #969e7d 85%,
   #363a2d 100%
   );
+  position: relative;
 }
 .sec-game{
-  min-height: 200vh;
+  min-height: 150vh;
 }
 nav{
  background: transparent;
@@ -119,7 +120,7 @@ h5{
     #136817 85%,
     #145831 100%
     );
-  box-shadow: 0 0 15px #88edb0;
+  box-shadow: 0 0 20px #88edb0;
   border-radius: 5px;
 }
 .main-description{
@@ -127,7 +128,6 @@ h5{
 }
 .portfolio{
   grid-area: portfolio;
-  font-style: italic;
   color: #302058;
 }
 .about-me{
@@ -163,6 +163,11 @@ h5{
 }
 .portfolio-name{
   font-size: clamp(0.3rem, 3vw, 2rem);
+  font-weight: 500;
+}
+.portfolio-name span{
+ font-weight: 100;
+ font-style: italic;
 }
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////NAVBAR///////////////////////////////////////////////////////////*/
@@ -252,11 +257,32 @@ h5{
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  text-shadow: 1px 1px 1px black;
+  color: #777c62;
+  border: 5px solid #969e7d;
+  border-radius: 1px;
+  box-shadow: inset 12px 12px 16px 7px #4f5542, 5px 5px 5px 1px #363a2d;  
+  background: radial-gradient(
+  circle,
+  #cfd3c1 0%,
+  #969e7d 97%,
+  #363a2d 100%
+  );
+}
+.title-about-me{
+  font-size: clamp(1rem, 3vw, 2.5rem);
+}
+.about-me-formation {
+  grid-area: formation;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #251944;
   border-right: black;
   border-bottom: black;
-  border-radius: 0px 40% 20% 0px;
-  box-shadow: inset -25px 0px 7px #271b20, 12px 4px 6px black;
-background:
+  border-radius: 0px 50% 13% 0px;
+  box-shadow: inset -15px 0px 6px 1px #161012, 10px 1px 3px 1px black;
+  background:
   radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), transparent 45%),
   conic-gradient(
     from 0deg,
@@ -272,50 +298,37 @@ background:
     #d48aa8
   );
 }
-.about-me-formation {
-  grid-area: formation;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: inset 1px 0px 10px #3f2c35, 1px 1px 2px 0.5px black;
-background:
-  radial-gradient(circle at 70% 60%, rgba(255,255,255,0.28), transparent 50%),
-  conic-gradient(
-    from 120deg,
-    #c98ca4,
-    #d6c0a0,
-    #aecfaa,
-    #9fd0d6,
-    #9fb6db,
-    #bcaed4,
-    #d4aecb,
-    #ebe8e2,
-    #d4aaaa,
-    #c98ca4
-  );
-}
 .about-me-habilities {
   grid-area: habilities;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: inset 1px 0px 10px #3f2c35, 0px 0px 2px 0.5px black;
-  background:
-  radial-gradient(circle at 40% 75%, rgba(255,255,255,0.30), transparent 50%),
-  conic-gradient(
-    from 240deg,
-    #c58fa8,
-    #d2bfa3,
-    #b2caaa,
-    #a3cdd2,
-    #a5b9d8,
-    #bfb2d2,
-    #d2b2c8,
-    #e9e6df,
-    #d2a8a8,
-    #c58fa8
+  text-shadow: 1px 1px 1px black;
+  color: #656954;
+  border: 5px solid #969e7d;
+  border-radius: 1px;
+  box-shadow: inset 8px 4px 10px 6px #4f5542, 5px 5px 5px 1px #363a2d; 
+  background: radial-gradient(
+  circle,
+  #cfd3c1 0%,
+  #969e7d 85%,
+  #363a2d 100%
   );
+
 }
+.logo-unitec{
+  position: absolute;
+  top: 74%;
+  right: 27%;
+  width: 24%;
+  height: 24%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transform: rotate(340deg);
+  z-index: 1;
+}
+
 .about-me-list{
   display: flex;
   flex-direction: column;
@@ -335,49 +348,59 @@ background:
   font-size: clamp(0.3rem, 2.5vw, 1rem);
   padding: 0.5%;
 }
-.title-about-me{
-  font-size: clamp(1rem, 3vw, 2.5rem);
-}
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////PROYECTS CONT//////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .proyects-grid{
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   grid-template-areas:
-  '. . . devs devs devs devs . . .'
-  'radar radar radar radar radar mapfids mapfids mapfids mapfids mapfids'
-  'radar radar radar radar radar mapfids mapfids mapfids mapfids mapfids'
-  'radar radar radar radar radar mapfids mapfids mapfids mapfids mapfids'
-  'radar radar radar radar radar mapfids mapfids mapfids mapfids mapfids'
-  'armrobot armrobot armrobot proyect proyect proyect proyect general  general general '
-  'armrobot armrobot armrobot carctrhand carctrhand car car general general general'
-  'armrobot armrobot armrobot carctrhand carctrhand car car general general general';
+  '. . . devs devs devs . . .'
+  'radar radar radar virtmap virtmap virtmap mapfids mapfids mapfids'
+  'radar radar radar virtmap virtmap virtmap mapfids mapfids mapfids'
+  'radar radar radar virtmap virtmap virtmap mapfids mapfids mapfids'
+  'radar radar radar virtmap virtmap virtmap mapfids mapfids mapfids'
+  '. . . proyect proyect proyect . . .'
+  'armrobot armrobot armrobot car car car general general general '
+  'armrobot armrobot armrobot car car car general general general'
+  'armrobot armrobot armrobot car car car general general general'
+  'armrobot armrobot armrobot car car car general general general';
+
   gap: 10px;
   width: 100%;
-  height: 200vh;
-  padding: 8% 4% 2% 4%;
+  height: 140vh;
+  padding: 8% 5% 0 5%;
 }
-.game{
-  display: block;
-  height: 100px;
-  width: 100px;
-}
-.devs{
-  grid-area: devs;
+.proyects-title{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-shadow: 1px 1px 1px black;
+  color: #656954;
+  border: 5px solid #969e7d;
+  border-radius: 1px;
+  box-shadow: inset 8px 4px 10px 6px #4f5542, 5px 5px 5px 1px #363a2d; 
+  background: radial-gradient(
+  circle,
+  #cfd3c1 0%,
+  #969e7d 85%,
+  #363a2d 100%
+  );
+  font-size: clamp(1rem, 3vw, 2.5rem);
 }
-.radar{
-  grid-area: radar;
+.more-view{
+  padding-top: 3px;
+  text-decoration: underline;
+}
+/*******************************************GAME*****************************************************/
+.game{
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
   grid-template-areas:
-  '. name-game name-game name-game name-game name-game name-game .' 
-  '. name-game name-game name-game name-game name-game name-game .' 
+  'rowleft name-game name-game name-game name-game name-game name-game rowright' 
+  'rowleft name-game name-game name-game name-game name-game name-game rowright' 
   '. img-game img-game img-game img-game img-game img-game .'
   '. img-game img-game img-game img-game img-game img-game .'
   '. img-game img-game img-game img-game img-game img-game .'
@@ -386,26 +409,32 @@ background:
   '. . . . . . . .';
     gap: 20px;
     width: 100%;
-    padding: 8% 4% 2% 4%;
-  background:
-    linear-gradient(to top, #0b0f47 0%, transparent 90%),
-    linear-gradient(to bottom, #1b2285 0%, transparent 5%),
-    linear-gradient(to left, #0e1358 0%, transparent 80%),
-    linear-gradient(to right, #1b2285 0%, transparent 5%),
-    #131d79; /* color base */
+    padding: 8% 0% 2% 0%;
     border-radius: 10px;
+    border-color: var(--borderColor);
+    transition: transform 0.2s ease;
 }
-.img-game{
-  grid-area: img-game;
-  width: 100%;
-  height: 100%; /* 👈 importante */
-  display: flex;
-  box-shadow: 0 0 5px 7px #030425;
+.game:hover{
+  transform: scale(1.1);
 }
-.img-game img{
-  width: 100%;
-  height: 100%;
-  display: block; /* quita espacios raros */
+.color-game{
+    background:
+    linear-gradient(to bottom, var(--toBottomGame) 0%, transparent 5%),
+    linear-gradient(to top, var(--toTopGame) 0%, transparent 90%),
+    linear-gradient(to left, var(--toLeftGame) 0%, transparent 80%),
+    linear-gradient(to right, var(--toRightGame) 0%, transparent 5%),
+    var(--baseGame);
+}
+.color-name{
+  background:
+    linear-gradient(to bottom, var(--toBottomName) 0%, transparent 80%),
+    linear-gradient(to top, var(--toTopName) 0%, transparent 10%),
+    linear-gradient(to left, var(--toLeftName) 0%, transparent 10%),
+    linear-gradient(to right, var(--toRightName) 0%, transparent 30%),
+    var(--baseName);
+  box-shadow: inset 6px 10px 20px 5px var(--shadowInset), 2px 1px 7px 1px var(--shadow);
+  color: var(--colorName);
+  text-shadow: 2px 1px 1px var(--shadowName);
 }
 .name-game{
   grid-area: name-game;
@@ -413,22 +442,45 @@ background:
   flex-direction: column;
   justify-content: center;
   border-radius: 50px;
-    background:
-    linear-gradient(to bottom, #0e1358 0%, transparent 80%),
-    linear-gradient(to top, #1b2285 0%, transparent 10%),
-    linear-gradient(to right, #0e1358 0%, transparent 30%),
-    linear-gradient(to left, #1b2285 0%, transparent 10%),
-    #131d79;
-  box-shadow: inset 6px 10px 20px 5px #030425, 2px 1px 7px 1px #171e7e;
+  font-weight: 900;
+  font-size: clamp(0.3rem, 2.5vw, 1.8rem);
 }
-.virtmap{
-  grid-area: virtmap;
+.img-game{
+  grid-area: img-game;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-.mapfids{
-  grid-area: mapfids;
+.img-game img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.rowleft{
+  grid-area: rowleft;
+    background: repeating-linear-gradient(
+    to bottom,
+    var(--lineLeft1) 20px,
+    var(--lineLeft2) 10px,
+    var(--lineLeft3) 30px
+  );
+  height: 100%;
+  box-shadow: inset -2px 0 4px var(--shadowRows);
+}
+.rowright {
+  grid-area: rowright;
+    background: repeating-linear-gradient(
+    to bottom,
+    var(--lineRight1) 20px,
+    var(--lineRight2) 10px,
+    var(--lineRight3) 30px
+  );
+  height: 100%;
+  box-shadow: inset 0 0 15px 2px var(--shadowRows);
+}
+/*****************************************PROYECTS**********************************************/
+.devs{
+  grid-area: devs;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -439,24 +491,121 @@ background:
   flex-direction: column;
   justify-content: center;
 }
-.armrobot{
-  grid-area: armrobot;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/*****RADAR*******/
+.radar{
+  grid-area: radar;
+    --baseGame:  #131d79;
+    --toBottomGame: #1b2285;
+    --toTopGame: #0b0f47;
+    --toLeftGame: #0e1358;
+    --toRightGame: #1b2285;
+  
+  --borderColor: #0b0f50;
+}
+.radar-name{
+  --baseName: #131d79;
+  --toBottomName: #1b2285;
+  --toTopName: #0e1358;
+  --toLeftName: #1b2285;
+  --toRightName: #0e1358;
+  --shadowInset: #030425;
+  --shadow: #171e7e;
+  --colorName: #080b38;
+  --shadowName: #080a2c;
+}
+.radar-fig-shadow{
+  box-shadow: 0 0 5px 7px #030425;
+}
+.radar-rows-shadow{
+  /*ROWRIGHR*/
+  --lineRight1: #1b2285 ;
+  --lineRight2: #1b2285;
+  --lineRight3: #030425;
+  /*ROWLEFT*/
+  --lineLeft1: #1b2285;
+  --lineLeft2: #030425;
+  --lineLeft3: #1b2285;
+  /*ROWSHADOW*/
+  --shadowRows: #030425;
+}
+/******MAPAFIDS************/
+.mapfids{
+  grid-area: mapfids;
+    --baseGame:  #131d79;
+    --toBottomGame: #1b2285;
+    --toTopGame: #0b0f47;
+    --toLeftGame: #0e1358;
+    --toRightGame: #1b2285;
+
+    --borderColor: #0b0f50;
+}
+.mapfids-name{
+  --baseName: #131d79;
+  --toBottomName: #1b2285;
+  --toTopName: #0e1358;
+  --toLeftName: #1b2285;
+  --toRightName: #0e1358;
+  --shadowInset: #030425;
+  --shadow: #171e7e;
+  --colorName: #080b38;
+  --shadowName: #080a2c;
+}
+.mapfids-fig-shadow{
+  box-shadow: 0 0 5px 7px #030425;
 
 }
-.carctrhand{
-  grid-area: carctrhand;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.mapfids-rows-shadow{
+  --lineRight1: #1b2285 ;
+  --lineRight2: #1b2285;
+  --lineRight3: #030425;
+  /*ROWLEFT*/
+  --lineLeft1: #1b2285;
+  --lineLeft2: #030425;
+  --lineLeft3: #1b2285;
+  /*ROWSHADOW*/
+  --shadowRows: #030425;
+}
+/**************VIRTMAP****************/
+.virtmap{
+  grid-area: virtmap;
+    --baseGame:  #131d79;
+    --toBottomGame: #1b2285;
+    --toTopGame: #0b0f47;
+    --toLeftGame: #0e1358;
+    --toRightGame: #1b2285;
+
+    --borderColor: #0b0f50;
+}
+.virtmap-name{
+  --baseName: #131d79;
+  --toBottomName: #1b2285;
+  --toTopName: #0e1358;
+  --toLeftName: #1b2285;
+  --toRightName: #0e1358;
+  --shadowInset: #030425;
+  --shadow: #171e7e;
+  --colorName: #080b38;
+  --shadowName: #080a2c;
+}
+.virtmap-fig-shadow{
+  box-shadow: 0 0 5px 7px #030425;
+}
+.virtmap-rows-shadow{
+  --lineRight1: #1b2285 ;
+  --lineRight2: #1b2285;
+  --lineRight3: #030425;
+  /*ROWLEFT*/
+  --lineLeft1: #1b2285;
+  --lineLeft2: #030425;
+  --lineLeft3: #1b2285;
+  /*ROWSHADOW*/
+  --shadowRows: #030425;
+}
+.armrobot{
+  grid-area: armrobot;
 }
 .car{
   grid-area: car;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .general{
   grid-area: general;
@@ -464,16 +613,7 @@ background:
   flex-direction: column;
   justify-content: center;
 }
-.proyects-place{
-  font-size: 3px;
-}
-.proyects-title{
-  font-size: 3px;
-}
-.more-view{
-  padding-top: 3px;
-  text-decoration: underline;
-}
+
 /*/////////////////////////////////////////////MODAL TOOLS///////////////////////////////////////////////////////*/
 .modal{
   color: white;

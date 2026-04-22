@@ -413,6 +413,14 @@ h5{
     border-radius: 10px;
     border-color: var(--borderColor);
     transition: transform 0.2s ease;
+
+    clip-path: polygon(
+    0 0,
+    calc(100% - 40px) 0,
+    100% 30px,
+    100% 100%,
+    0 100%
+  );
 }
 .game:hover{
   transform: scale(1.1);
@@ -531,87 +539,158 @@ h5{
 /******MAPAFIDS************/
 .mapfids{
   grid-area: mapfids;
-    --baseGame:  #131d79;
-    --toBottomGame: #1b2285;
-    --toTopGame: #0b0f47;
-    --toLeftGame: #0e1358;
-    --toRightGame: #1b2285;
+    --baseGame:  #d60a0a;
+    --toBottomGame: #d60a0a;
+    --toTopGame: #8a1111;
+    --toLeftGame: #910f0f;
+    --toRightGame: #d60a0a;
 
-    --borderColor: #0b0f50;
+    --borderColor: #961313;
 }
 .mapfids-name{
-  --baseName: #131d79;
-  --toBottomName: #1b2285;
-  --toTopName: #0e1358;
-  --toLeftName: #1b2285;
-  --toRightName: #0e1358;
-  --shadowInset: #030425;
-  --shadow: #171e7e;
-  --colorName: #080b38;
-  --shadowName: #080a2c;
+  --baseName: #d60a0a;
+  --toBottomName: #d60a0a;
+  --toTopName: #961313;
+  --toLeftName: #d60a0a;
+  --toRightName: #961313;
+  --shadowInset: #4b0505;
+  --shadow: #be0d0d;
+  --colorName: #630808;
+  --shadowName: #5c0606;
 }
 .mapfids-fig-shadow{
-  box-shadow: 0 0 5px 7px #030425;
+  box-shadow: 0 0 5px 7px #580808;
 
 }
 .mapfids-rows-shadow{
-  --lineRight1: #1b2285 ;
-  --lineRight2: #1b2285;
-  --lineRight3: #030425;
+  --lineRight1: #d60a0a ;
+  --lineRight2: #d60a0a;
+  --lineRight3: #580808;
   /*ROWLEFT*/
-  --lineLeft1: #1b2285;
-  --lineLeft2: #030425;
-  --lineLeft3: #1b2285;
+  --lineLeft1: #d60a0a;
+  --lineLeft2: #580808;
+  --lineLeft3: #d60a0a;
   /*ROWSHADOW*/
-  --shadowRows: #030425;
+  --shadowRows: #580808;
 }
 /**************VIRTMAP****************/
 .virtmap{
   grid-area: virtmap;
-    --baseGame:  #131d79;
-    --toBottomGame: #1b2285;
-    --toTopGame: #0b0f47;
-    --toLeftGame: #0e1358;
-    --toRightGame: #1b2285;
+    --baseGame:  #64656d;
+    --toBottomGame: #64656d;
+    --toTopGame: #2f2f31;
+    --toLeftGame: #3c3d41;
+    --toRightGame: #64656d;
 
-    --borderColor: #0b0f50;
+    --borderColor: #333438;
 }
-.virtmap-name{
-  --baseName: #131d79;
-  --toBottomName: #1b2285;
-  --toTopName: #0e1358;
-  --toLeftName: #1b2285;
-  --toRightName: #0e1358;
-  --shadowInset: #030425;
-  --shadow: #171e7e;
-  --colorName: #080b38;
-  --shadowName: #080a2c;
+.virtmap-name, .general-name{
+  --baseName: #53555f;
+  --toBottomName: #64656d;
+  --toTopName: #3c3d41;
+  --toLeftName: #64656d;
+  --toRightName: #3c3d41;
+  --shadowInset: #242527;
+  --shadow: #242525;
+  --colorName: #363638;
+  --shadowName: #242527;
 }
-.virtmap-fig-shadow{
-  box-shadow: 0 0 5px 7px #030425;
+.virtmap-fig-shadow, .general-fig-shadow{
+  box-shadow: 0 0 5px 7px #101111;
 }
-.virtmap-rows-shadow{
-  --lineRight1: #1b2285 ;
-  --lineRight2: #1b2285;
-  --lineRight3: #030425;
+.virtmap-rows-shadow, .general-rows-shadow{
+  --lineRight1: #64656d;
+  --lineRight2: #64656d;
+  --lineRight3: #101111;
   /*ROWLEFT*/
-  --lineLeft1: #1b2285;
-  --lineLeft2: #030425;
-  --lineLeft3: #1b2285;
+  --lineLeft1: #64656d;
+  --lineLeft2: #101111;
+  --lineLeft3: #64656d;
   /*ROWSHADOW*/
-  --shadowRows: #030425;
+  --shadowRows: #101111;
 }
+/**************ARMROBOT****************/
 .armrobot{
   grid-area: armrobot;
+    --baseGame:  #f53900;
+    --toBottomGame: #f53900;
+    --toTopGame: #882709;
+    --toLeftGame: #922606;
+    --toRightGame: #f53900;
+
+    --borderColor: #922606;
 }
+.armrobot-name{
+  --baseName: #f53900;
+  --toBottomName: #fd420a;
+  --toTopName: #922606;
+  --toLeftName: #f53900;
+  --toRightName: #922606;
+  --shadowInset: #3f0f00;
+  --shadow: #ce380a;
+  --colorName: #922606;
+  --shadowName: #3f0f00;
+}
+.armrobot-fig-shadow{
+  box-shadow: 0 0 5px 7px #3f0f00;
+}
+.armrobot-rows-shadow{
+  --lineRight1: #f53900 ;
+  --lineRight2: #f53900;
+  --lineRight3: #3f0f00;
+  /*ROWLEFT*/
+  --lineLeft1: #f53900;
+  --lineLeft2: #3f0f00;
+  --lineLeft3: #f53900;
+  /*ROWSHADOW*/
+  --shadowRows: #3f0f00;
+}
+/**************CAR****************/
 .car{
   grid-area: car;
+    --baseGame:  #8b940b;
+    --toBottomGame: #a6b10d;
+    --toTopGame: #71790b;
+    --toLeftGame: #838b08;
+    --toRightGame: #a6b10d;
+
+    --borderColor: #535805;
 }
+.car-name{
+  --baseName: #a6b10d;
+  --toBottomName:#a6b10d;
+  --toTopName: #666d09;
+  --toLeftName: #a6b10d;
+  --toRightName: #71790b;
+  --shadowInset: #535805;
+  --shadow: #b2be0b;
+  --colorName: #535805;
+  --shadowName: #535805;
+}
+.car-fig-shadow{
+  box-shadow: 0 0 5px 7px #3e4204;
+}
+.car-rows-shadow{
+  --lineRight1: #a6b10d;
+  --lineRight2: #a6b10d;
+  --lineRight3: #535805;
+  /*ROWLEFT*/
+  --lineLeft1: #a6b10d;
+  --lineLeft2: #535805;
+  --lineLeft3: #a6b10d;
+  /*ROWSHADOW*/
+  --shadowRows: #535805;
+}
+/**************GENERAL****************/
 .general{
   grid-area: general;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    --baseGame:  #64656d;
+    --toBottomGame: #64656d;
+    --toTopGame: #2f2f31;
+    --toLeftGame: #3c3d41;
+    --toRightGame: #64656d;
+
+    --borderColor: #333438;
 }
 
 /*/////////////////////////////////////////////MODAL TOOLS///////////////////////////////////////////////////////*/

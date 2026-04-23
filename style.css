@@ -723,7 +723,7 @@ background: radial-gradient(
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 80%;
+  height: 85%;
   width: 90%;
 
     background: radial-gradient(
@@ -743,9 +743,8 @@ background: radial-gradient(
   'language web screen screen plc soft'
   'language web screen screen plc soft'
   'language web screen screen plc soft'
-  'language web db frameworks plc soft'
-  'language web db frameworks plc soft'
-
+  'language web db designe plc soft'
+  'language web db designe plc soft'
   ;
   gap: 2px;
   padding: 1%;
@@ -853,8 +852,8 @@ background: radial-gradient(
   grid-area: web;
 
 }
-.frameworks{
-  grid-area: frameworks;
+.designe{
+  grid-area: designe;
 
 }
 .db{

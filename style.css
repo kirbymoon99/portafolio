@@ -842,6 +842,13 @@ background: radial-gradient(
   min-width: 6px;
   object-fit: contain;
 }
+.images{
+  width: 50px;
+  min-width: 6px;
+  height: 30px;
+  min-width: 6px;
+  object-fit: contain;
+}
 .skill-li span{
   font-size: clamp(0.2rem, 1vw, 0.6rem);
 }
@@ -892,10 +899,73 @@ background: radial-gradient(
   grid-area: soft;
 
 }
+/*************************LEVEL************************************************/
+
+.skill-container img {
+  width: 50px;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+  font-family: 'Press Start 2P', monospace; /* opcional */
+}
+
+/* Marco tipo UI retro */
+.barra {
+  width: 220px;
+  height: 20px;
+  background: #50e742;
+  border: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Barra estilo pixel */
+.nivel {
+  height: 100%;
+  width: 0;
+  background: repeating-linear-gradient(
+    to right,
+    #145831  0px,
+    #145831  10px,
+    #145831  10px,
+    #145831  20px
+  );
+  transition: width 0.6s steps(20); /* efecto “a saltos” */
+}
 
 /*////////////////////////////////*/
 .blink{
   animation: blink-custom 5s infinite;
+}
+
+@keyframes blink-custom {
+  0% { opacity: 1; }
+  1% { opacity: 0; }
+  2% { opacity: 1; }
+  3% { opacity: 0; }
+  4% { opacity: 1; }
+  5% { opacity: 0; }
+  6% { opacity: 1; }
+  9% { opacity: 0; }
+  12% { opacity: 1; }
+  15% { opacity: 0; }
+  20% { opacity: 1; }
+
+  30% { opacity: 0; }
+  35% { opacity: 1; }
+
+  40% { opacity: 0; }
+  45% { opacity: 1; }
+
+  100% { opacity: 1; }
+}
+.blink2{
+  animation: blink-custom 5s forwards;
 }
 
 @keyframes blink-custom {

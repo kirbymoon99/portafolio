@@ -754,7 +754,7 @@ background: radial-gradient(
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 7px groove #0f380f;
+  border: 7px ridge #0f380f;
   height: 100%;
   width: 100%;
   min-width: 50px;
@@ -762,14 +762,14 @@ background: radial-gradient(
 
 
     clip-path: polygon(
-    20px 0,
-    calc(100% - 20px) 0,
-    100% 20px,
-    100% calc(100% - 20px),
-    calc(100% - 20px) 100%,
-    20px 100%,
-    0 calc(100% - 20px),
-    0 20px
+    10px 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    10px 100%,
+    0 calc(100% - 10px),
+    0 10px
   );
 
 }
@@ -911,11 +911,11 @@ background: radial-gradient(
   align-items: center;
   gap: 12px;
   margin-top: 15px;
-  font-family: 'Press Start 2P', monospace; /* opcional */
+  font-family: 'Press Start 2P', monospace;
 }
 
 /* Marco tipo UI retro */
-.barra {
+.bar {
   width: 220px;
   height: 20px;
   background: #50e742;
@@ -925,7 +925,7 @@ background: radial-gradient(
 }
 
 /* Barra estilo pixel */
-.nivel {
+.level {
   height: 100%;
   width: 0;
   background: repeating-linear-gradient(
@@ -936,6 +936,12 @@ background: radial-gradient(
     #145831  20px
   );
   transition: width 0.6s steps(20); /* efecto “a saltos” */
+}
+.let-screen{
+  font-size: clamp(0.4rem, 1vw, 1rem);
+}
+.logo-screen{
+  height: 70px;
 }
 
 /*////////////////////////////////*/

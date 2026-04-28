@@ -9,9 +9,12 @@ html{
 }
 body {
   font-family: Arial;
-  background:black;
+  background:
+  linear-gradient(to right, #363a2d  0%, transparent 10% ), 
+  linear-gradient(to left, #363a2d  0%, transparent 10% ),
+  #abb396;
 }
-section {
+section { 
   min-height: 100vh;
   background: radial-gradient(
   circle,
@@ -21,6 +24,7 @@ section {
   );
   position: relative;
 }
+
 .sec-game{
   min-height: 150vh;
 }
@@ -502,9 +506,9 @@ h5{
 /*****RADAR*******/
 .radar{
   grid-area: radar;
-    --baseGame:  #131d79;
+    --baseGame:  #0f1c96;
     --toBottomGame: #1b2285;
-    --toTopGame: #0b0f47;
+    --toTopGame: #0c137a;
     --toLeftGame: #0e1358;
     --toRightGame: #1b2285;
   
@@ -539,10 +543,10 @@ h5{
 /******MAPAFIDS************/
 .mapfids{
   grid-area: mapfids;
-    --baseGame:  #d60a0a;
+    --baseGame:  #ec1111;
     --toBottomGame: #d60a0a;
-    --toTopGame: #8a1111;
-    --toLeftGame: #910f0f;
+    --toTopGame: #a70f0f;
+    --toLeftGame: #a81010;
     --toRightGame: #d60a0a;
 
     --borderColor: #961313;
@@ -576,9 +580,9 @@ h5{
 /**************VIRTMAP****************/
 .virtmap{
   grid-area: virtmap;
-    --baseGame:  #64656d;
+    --baseGame:  #74757a;
     --toBottomGame: #64656d;
-    --toTopGame: #2f2f31;
+    --toTopGame: #4f4f55;
     --toLeftGame: #3c3d41;
     --toRightGame: #64656d;
 
@@ -612,9 +616,9 @@ h5{
 /**************ARMROBOT****************/
 .armrobot{
   grid-area: armrobot;
-    --baseGame:  #f53900;
+    --baseGame:  #fc4e19;
     --toBottomGame: #f53900;
-    --toTopGame: #882709;
+    --toTopGame: #c53a10;
     --toLeftGame: #922606;
     --toRightGame: #f53900;
 
@@ -648,9 +652,9 @@ h5{
 /**************CAR****************/
 .car{
   grid-area: car;
-    --baseGame:  #8b940b;
+    --baseGame:  #b6c20f;
     --toBottomGame: #a6b10d;
-    --toTopGame: #71790b;
+    --toTopGame: #8b9408;
     --toLeftGame: #838b08;
     --toRightGame: #a6b10d;
 
@@ -694,7 +698,16 @@ h5{
 }
 
 /*/////////////////////////////////////////////MODAL TOOLS///////////////////////////////////////////////////////*/
+dialog {
+  width: 500px;
+  max-width: 90%;
+  border-radius: 12px;
+  padding: 20px;
+}
 
+dialog::backdrop {
+  background: rgba(0,0,0,0.6);
+}
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////SKILLS////////////////////////////////////////////////////////////////*/

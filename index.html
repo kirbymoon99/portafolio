@@ -83,7 +83,7 @@
 
 
 
-<section id="about-me-section">
+<section class="sec-two" id="about-me-section">
 
    </div>
     <div class="logo-unitec">
@@ -128,7 +128,7 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
 </section>
 
 
-<section id="proyects-section" class="sec-game">
+<section id="proyects-section" class="sec-game sec-two">
 
   <div class="proyects-grid">
 
@@ -136,21 +136,21 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
       <h5 class="proyects-title">DESARROLLOS</h5>
     </button>
 
-    <button class="game color-game radar">
+    <button class="game color-game radar" data-modal="radar">
       <div class="rowleft radar-rows-shadow"></div>
       <div class="color-name name-game radar-name"><strong>RADAR AICM</strong></div>
       <div class="rowright radar-rows-shadow"></div>
       <div class="img-game radar-fig-shadow"><img src="img/proyectGames/RADAR.jpg"></div>
     </button>
 
-    <button class="game color-game virtmap">
+    <button class="game color-game virtmap" data-modal="mapa">
       <div class="rowleft virtmap-rows-shadow"></div>
       <div class="color-name name-game virtmap-name"><strong>MAPA AICM</strong></div>
       <div class="rowright virtmap-rows-shadow"></div>
       <div class="img-game virtmap-fig-shadow"><img src="img/proyectGames/mapaAeropuerto.jpg"></div>
     </button>
 
-    <button class="game color-game mapfids">
+    <button class="game color-game mapfids" data-modal="fids">
       <div class="rowleft mapfids-rows-shadow"></div>
       <div class="color-name name-game mapfids-name"><strong>FIDS AICM</strong></div>
       <div class="rowright mapfids-rows-shadow"></div>
@@ -161,21 +161,21 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
       <h2 class="proyects-title">PROYECTOS</h2>
     </button>
 
-     <button class="game color-game armrobot">
+     <button class="game color-game armrobot" data-modal="brazo">
       <div class="rowleft armrobot-rows-shadow"></div>
       <div class="color-name name-game armrobot-name"><strong>BRAZO</strong></div>
       <div class="rowright armrobot-rows-shadow"></div>
       <div class="img-game armrobot-fig-shadow"><img src="img/proyectGames/brazo.jpg"></div>
     </button>
 
-    <button class="game color-game car">
+    <button class="game color-game car" data-modal="carro">
       <div class="rowleft car-rows-shadow"></div>
       <div class="color-name name-game car-name"><strong>CARRO</strong></div>
       <div class="rowright car-rows-shadow"></div>
       <div class="img-game car-fig-shadow"><img src="img/proyectGames/autoRC.jpg"></div>
     </button>
 
-    <button class="game color-game general">
+    <button class="game color-game general" data-modal="ingenieria">
       <div class="rowleft general-rows-shadow"></div>
       <div class="color-name name-game general-name"><strong>INGENIERIA</strong></div>
       <div class="rowright general-rows-shadow"></div>
@@ -184,11 +184,44 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
 
   </div>
    
+  
+   <dialog id="radar">
+    <h2>Radar</h2>
+    <p>Contenido general.</p>
+    <button class="cerrar">Cerrar</button>
+  </dialog>
 
+  <dialog id="mapa">
+    <h2>Mapa 3D</h2>
+    <p>Contenido general.</p>
+    <button class="cerrar">Cerrar</button>
+  </dialog>
 
-    <dialog class="modal">
+  <dialog id="fids">
+    <h2>Mapa fids</h2>
+    <p>Contenido general.</p>
+    <button class="cerrar">Cerrar</button>
+  </dialog>
 
-    </dialog>
+  <dialog id="brazo">
+    <h2>Brazo robótico</h2>
+    <p>Contenido del proyecto brazo.</p>
+    <button class="cerrar">Cerrar</button>
+  </dialog>
+
+  <dialog id="carro">
+    <h2>Carro RC</h2>
+    <p>Contenido del proyecto carro.</p>
+    <button class="cerrar">Cerrar</button>
+  </dialog>
+
+  <dialog id="ingenieria">
+    <h2>Ingeniería</h2>
+    <p>Contenido general.</p>
+    <button class="cerrar">Cerrar</button>
+  </dialog>
+
+  
 
     
 </section>

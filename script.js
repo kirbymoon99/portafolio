@@ -7,7 +7,7 @@ document.querySelectorAll(".game").forEach(btn => {
 });
 
 
-document.querySelectorAll(".cerrar").forEach(btn => {
+document.querySelectorAll(".btnClose").forEach(btn => {
   btn.addEventListener("click", () => {
     btn.closest("dialog").close();
   });

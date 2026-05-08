@@ -1,3 +1,6 @@
+
+
+/*****************************************************************************************/ 
 document.querySelectorAll(".game").forEach(btn => {
   btn.addEventListener("click", () => {
     const id = btn.dataset.modal;
@@ -287,4 +290,150 @@ contenedor.innerHTML = `
   setTimeout(() => {
     contenedor.querySelector(".level").style.width = data.level + "%";
   }, 100);
+}
+
+// ---------------- PROYECTOS ----------------
+const proyectos = {
+  radar: {
+    general: 
+`       <p><strong>RADAR – Sistema de Monitoreo de Operaciones Aéreas en Tiempo Real</strong><br>
+        <br>Sistema desarrollado en la Gerencia de Desarrollo e Informática del AICM, enfocado en la visualización y registro en tiempo real de operaciones aéreas en ambas terminales.
+        <br><br>RADAR consiste en un mapa interactivo que muestra la posición en superficie de las aeronaves, así como información clave de cada vuelo, incluyendo aerolínea, número de vuelo, identificador ICAO y coordenadas (latitud, longitud y altitud). El sistema permite identificar con precisión los eventos de aterrizaje y despegue en el momento exacto en que una aeronave toca o abandona pista.
+        <br><br>Su principal objetivo es generar un registro confiable y automatizado de las operaciones, reduciendo incidencias y respaldando la resolución de reclamaciones por parte de aerolíneas mediante evidencia precisa y trazable.
+        <br><br>El entorno de desarrollo integra una arquitectura basada en adquisición, procesamiento y visualización de datos. La información es capturada mediante una antena dedicada que intercepta frecuencias específicas de aviación, procesada en Python para la decodificación de datos crudos, y posteriormente almacenada en SQL Server. Para su consumo en el frontend, los datos son estructurados en formato JSON mediante Node.js. La interfaz fue desarrollada con JavaScript, HTML y CSS, permitiendo una visualización clara, dinámica y en tiempo real.</p>`,
+    radarvsc: 
+    `<p><strong>SOFT</strong><br><br>Descripción</p>`
+  },
+  mapa: {
+    general: 
+    `<p><strong>SOFT</strong><br><br>Descripción</p>`,
+    vista: 
+    `<p><strong>SOFT</strong><br><br>Descripción</p>`
+  },
+  fids: {
+    general: 
+    `<p><strong>SOFT</strong><br><br>Descripción</p>`,
+    vista: 
+    `<p><strong>SOFT</strong><br><br>Descripción</p>`
+  },
+  brazo: {
+    general: 
+    `<p><strong>SOFT</strong><br><br>Descripción</p>`,
+    vista: 
+    `<p><strong>SOFT</strong><br><br>Descripción</p>`
+  },
+  carro: {
+    general: 
+    `<p><strong>SOFT</strong><br><br>Descripción</p>`,
+    vista: 
+    `<p><strong>SOFT</strong><br><br>Descripción</p>`
+  },
+  ingenieria: {
+    general: 
+    `<p><strong>SOFT</strong><br><br>Descripción</p>`,
+    vista: 
+    `<p><strong>SOFT</strong><br><br>Descripción</p>`
+  }
+};
+
+document.querySelectorAll(".modal-skill-li").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const key = btn.dataset.proj;
+
+    const modal = btn.closest("dialog");
+    const modalId = modal.id;
+
+    const contenedor = modal.querySelector(".modal-content");
+
+    if (!contenedor) return;
+
+    const contenido = proyectos[modalId]?.[key];
+
+    if (!contenido) return;
+
+    contenedor.innerHTML = contenido;
+  });
+});
+
+// IMÁGENES DE CADA MODAL
+const imagenesModalRadar = [
+  "img/radarC/radar1.jpg",
+  "img/radarC/radar2.jpg",
+  "img/radarC/radar3.jpg",
+  "img/radarC/radar4.png",
+  "img/radarC/radar5.png",
+  "img/radarC/radar6.png",
+  "img/radarC/radar7.png",
+  "img/radarC/radar8.png",
+  "img/radarC/radar9.png",
+  "img/radarC/radar10.png",
+  "img/radarC/radar11.png",
+];
+
+const imagenesModalMapa = [
+  "img/mapaVirtC/mapVirt2.png",
+  "img/mapaVirtC/mapVirt1.png",
+  "img/mapaVirtC/mapVirt3.png",
+  "img/mapaVirtC/mapVirt4.png",
+  "img/mapaVirtC/mapVirt5.png",
+  "img/mapaVirtC/mapVirt6.png",
+  "img/mapaVirtC/mapVirt7.png",
+  "img/mapaVirtC/mapVirt8.png",
+  "img/mapaVirtC/mapVirt9.png",
+  "img/mapaVirtC/mapVirt10.png",
+  "img/mapaVirtC/mapVirt11.png",
+  "img/mapaVirtC/mapVirt12.png"
+];
+const imagenesModalMapaFids = [
+  "img/mapaFidsC/mapaFids.jpg",
+  "img/mapaFidsC/mapaFids2.jpg",
+  "img/mapaFidsC/mapaFids3.jpg",
+  "img/mapaFidsC/mapaFids4.png",
+  "img/mapaFidsC/mapaFids5.png",
+  "img/mapaFidsC/mapaFids6.png",
+  "img/mapaFidsC/mapaFids7.png"
+];
+const imagenesModalBrazo = [
+  "img/mapaFidsC/mapaFids.jpg",
+  "img/mapaFidsC/mapaFids2.jpg",
+  "img/mapaFidsC/mapaFids3.jpg"
+];
+const imagenesModalCarro = [
+  "img/mapaFidsC/mapaFids.jpg",
+  "img/mapaFidsC/mapaFids2.jpg",
+  "img/mapaFidsC/mapaFids3.jpg"
+];
+const imagenesModalGeneral = [
+  "img/mapaFidsC/mapaFids.jpg",
+  "img/mapaFidsC/mapaFids2.jpg",
+  "img/mapaFidsC/mapaFids3.jpg"
+];
+
+// GUARDAR POSICIÓN DE CADA MODAL
+let indices = {};
+
+// FUNCIÓN GENERAL
+function moverImagen(idImg, listaImagenes, direccion) {
+
+  // Crear índice si no existe
+  if (indices[idImg] === undefined) {
+    indices[idImg] = 0;
+  }
+
+  // Cambiar índice
+  indices[idImg] += direccion;
+
+  // Si baja de 0 → ir al final
+  if (indices[idImg] < 0) {
+    indices[idImg] = listaImagenes.length - 1;
+  }
+
+  // Si pasa del final → regresar al inicio
+  if (indices[idImg] >= listaImagenes.length) {
+    indices[idImg] = 0;
+  }
+
+  // Cambiar imagen
+  document.getElementById(idImg).src =
+    listaImagenes[indices[idImg]];
 }

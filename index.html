@@ -188,9 +188,17 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
 
    <dialog class="modal radar color-game" id="radar">
 
+    <button class="btnImgModalLeft" onclick="moverImagen('imgModalRadar', imagenesModalRadar, -1)">
+      <strong>/<br>\</strong>
+    </button>
+
      <div class="modal-img">
-      <img src="img/Captura de pantalla 2025-08-14 152846.png">
+      <img id="imgModalRadar" src="img/radarC/radar1.jpg">
      </div>
+
+    <button class="btnImgModalRight" onclick="moverImagen('imgModalRadar', imagenesModalRadar, 1)">
+     <strong>\<br>/</strong>
+    </button>
 
     <div class="modal-title"> 
       <h2>RADAR</h2>
@@ -202,7 +210,7 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
       <div class="loc-CE"><img src="img/CE.png"><p>Contenido limitado por confidencialidad y derechos reservados.</p></div>
     </div>
 
-    <div class="modal-content">
+    <div class="modal-content" id="info-proyecto">
       <p><strong>RADAR – Sistema de Monitoreo de Operaciones Aéreas en Tiempo Real</strong><br>
         <br>Sistema desarrollado en la Gerencia de Desarrollo e Informática del AICM, enfocado en la visualización y registro en tiempo real de operaciones aéreas en ambas terminales.
         <br><br>RADAR consiste en un mapa interactivo que muestra la posición en superficie de las aeronaves, así como información clave de cada vuelo, incluyendo aerolínea, número de vuelo, identificador ICAO y coordenadas (latitud, longitud y altitud). El sistema permite identificar con precisión los eventos de aterrizaje y despegue en el momento exacto en que una aeronave toca o abandona pista.
@@ -212,11 +220,11 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
 
     <div class="list-tools">
       <span1>Herramientas Utilizadas</span1>
-        <button class="modal-skill-li">
+        <button class="modal-skill-li" data-proj="general">
           <img src="img/skills/electronica.png">
           <span class="">Calibracion de Antena</span>
         </button>
-        <button class="modal-skill-li">
+        <button class="modal-skill-li" data-proj="radarvsc">
           <img src="img/skills/vsc.png">
           <span class="">VSCode</span>
         </button>
@@ -257,9 +265,17 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
 
   <dialog class="modal virtmap color-game" id="mapa">
 
- <div class="modal-img">
-      <img src="img/Captura de pantalla 2025-08-14 152846.png">
+    <button class="btnImgModalLeft" onclick="moverImagen('imgModalMapa', imagenesModalMapa, -1)">
+      <strong>/<br>\</strong>
+    </button>
+
+     <div class="modal-img">
+      <img id="imgModalMapa" src="img/mapaVirtC/mapVirt2.jpg">
      </div>
+
+    <button class="btnImgModalRight" onclick="moverImagen('imgModalMapa', imagenesModalMapa, 1)">
+     <strong>\<br>/</strong>
+    </button>
 
     <div class="modal-title"> 
       <h2>MAPA VIRTUAL</h2>
@@ -284,6 +300,10 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
       </div>
 
     <div class="list-tools">
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/vsc.png">
+          <span class="">General</span>
+        </button>
       <span1>Herramientas Utilizadas</span1>
         <button class="modal-skill-li">
           <img src="img/skills/python.png">
@@ -332,10 +352,18 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
 
 
   <dialog class="modal mapfids color-game" id="fids">
+     
+    <button class="btnImgModalLeft" onclick="moverImagen('imgModalMapaFids', imagenesModalMapaFids, -1)">
+      <strong>/<br>\</strong>
+    </button>
 
- <div class="modal-img">
-      <img src="img/Captura de pantalla 2025-08-14 152846.png">
+     <div class="modal-img">
+      <img id="imgModalMapaFids" src="img/mapaFidsC/mapaFids.jpg">
      </div>
+
+    <button class="btnImgModalRight" onclick="moverImagen('imgModalMapaFids', imagenesModalMapaFids, 1)">
+     <strong>\<br>/</strong>
+    </button>
 
     <div class="modal-title"> 
       <h2>MAPA FIDS</h2>
@@ -357,8 +385,12 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
     </div>
 
     <div class="list-tools">
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/vsc.png">
+          <span class="">General</span>
+        </button>
         <span1>Herramientas Utilizadas</span1>
-        <button class="modal-skill-li">
+        <button class="modal-skill-li" data-proj="mapa">
           <img src="img/skills/vsc.png">
           <span class="">VSCode</span>
         </button>
@@ -395,9 +427,17 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
 
   <dialog class="modal armrobot color-game" id="brazo">
 
- <div class="modal-img">
-      <img src="img/Captura de pantalla 2025-08-14 152846.png">
+    <button class="btnImgModalLeft" onclick="moverImagen('imgModalBrazo', imagenesModalBrazo, -1)">
+      <strong>/<br>\</strong>
+    </button>
+
+     <div class="modal-img">
+      <img id="imgModalBrazo" src="img/mapaFidsC/mapaFids.jpg">
      </div>
+
+    <button class="btnImgModalRight" onclick="moverImagen('imgModalBrazo', imagenesModalBrazo, 1)">
+     <strong>\<br>/</strong>
+    </button>
 
     <div class="modal-title"> 
       <h2>BRAZO ROBOTICO</h2>
@@ -430,9 +470,17 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
 
   <dialog class="modal car color-game" id="carro">
 
- <div class="modal-img">
-      <img src="img/Captura de pantalla 2025-08-14 152846.png">
+    <button class="btnImgModalLeft" onclick="moverImagen('imgModalCarro', imagenesModalCarro, -1)">
+      <strong>/<br>\</strong>
+    </button>
+
+     <div class="modal-img">
+      <img id="imgModalCarro" src="img/mapaFidsC/mapaFids.jpg">
      </div>
+
+    <button class="btnImgModalRight" onclick="moverImagen('imgModalCarro', imagenesModalCarro, 1)">
+     <strong>\<br>/</strong>
+    </button>
 
     <div class="modal-title"> 
       <h2>CARRO CRT</h2>
@@ -465,9 +513,17 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
 
   <dialog class="modal general color-game" id="ingenieria">
 
- <div class="modal-img">
-      <img src="img/Captura de pantalla 2025-08-14 152846.png">
+    <button class="btnImgModalLeft" onclick="moverImagen('imgModalGeneral', imagenesModalGeneral, -1)">
+      <strong>/<br>\</strong>
+    </button>
+
+     <div class="modal-img">
+      <img id="imgModalGeneral" src="img/mapaFidsC/mapaFids.jpg">
      </div>
+
+    <button class="btnImgModalRight" onclick="moverImagen('imgModalGeneral', imagenesModalGeneral, 1)">
+     <strong>\<br>/</strong>
+    </button>
 
     <div class="modal-title"> 
       <h2>PROYECTOS INGENIERIA</h2>

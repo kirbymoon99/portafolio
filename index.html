@@ -94,7 +94,7 @@
 
     <div class="about-me-main sticker"><strong>
     <h5 class="title-about-me">Sobre mí</h5>
-    <p class="about-me-text">Soy Irving David Rodriguez Avendaño, Ingeniero Mecatrónico con enfoque en desarrollo full-stack, especializado en la integración de hardware y software para la creación de soluciones tecnológicas robustas, eficientes e innovadoras. Cuento con experiencia en el desarrollo de sistemas en tiempo real, incluyendo la implementación de arquitecturas basadas en microcontroladores, sensores y actuadores, así como en la comunicación con interfaces web mediante APIs.<br>
+    <p class="about-me-text">Mi nombre es Irving David Rodriguez Avendaño y soy Ingeniero Mecatrónico, especializado en la integración de hardware y software para la creación de soluciones tecnológicas robustas, eficientes e innovadoras. Cuento con experiencia en el desarrollo de sistemas en tiempo real, incluyendo la implementación de arquitecturas basadas en microcontroladores, sensores y actuadores, así como en la comunicación con interfaces web mediante APIs.<br>
 
 En el ámbito del desarrollo full-stack, he trabajado con tecnologías modernas para la construcción de aplicaciones web escalables, abarcando tanto el frontend (interfaces interactivas y experiencia de usuario) como el backend (lógica de negocio, gestión de bases de datos y servicios). Además, tengo experiencia en el despliegue, mantenimiento y optimización de plataformas tecnológicas, aplicando buenas prácticas como control de versiones, integración continua y diseño modular.<br>
 
@@ -432,7 +432,7 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
     </button>
 
      <div class="modal-img">
-      <img id="imgModalBrazo" src="img/mapaFidsC/mapaFids.jpg">
+      <img id="imgModalBrazo" src="img/brazoC/brazo.jpg">
      </div>
 
     <button class="btnImgModalRight" onclick="moverImagen('imgModalBrazo', imagenesModalBrazo, 1)">
@@ -449,13 +449,45 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
     </div>
 
     <div class="modal-content">
-      <p>Documentacion del proyecto</p>
+      <p><strong>Brazo Robótico de 3 GDL con Control Inalámbrico</strong>
+        <br><br>Proyecto desarrollado en la Universidad Tecnológica de México (UNITEC), enfocado en el diseño y control de un brazo robótico de 3 grados de libertad operado mediante un mando inalámbrico tipo Flex Pendant.
+        <br><br>El sistema fue diseñado para permitir el control remoto y preciso de los movimientos del brazo robótico, incorporando mecanismos de seguridad, almacenamiento de posiciones y ejecución automatizada de rutinas. La solución busca replicar principios utilizados en entornos industriales, integrando comunicación inalámbrica, control de movimiento y monitoreo en tiempo real.
+        <br><br>El brazo robótico está controlado mediante un Arduino Uno y utiliza algoritmos desarrollados en MATLAB para la implementación de control PID, mejorando la estabilidad y precisión de los movimientos. Además, se integraron polinomios de Bézier para generar trayectorias suaves y reducir problemas asociados a singularidades durante el desplazamiento del manipulador.
+        <br><br>La comunicación entre el brazo y el mando se realiza mediante radiofrecuencia a través de módulos transceptores, permitiendo tanto el envío de comandos de control como la retroalimentación de posición de cada servomotor.
+        <br><br>El Flex Pendant fue desarrollado utilizando un ESP32, incorporando la lógica de control del sistema, lectura de entradas y gestión de comunicación inalámbrica. El mando integra un joystick de 3 ejes para el movimiento manual, switches para almacenamiento de posiciones, ejecución de rutinas automatizadas y una pantalla de monitoreo que muestra el estado del brazo y la información de las secuencias programadas. Asimismo, se implementó un botón de seguridad de presión continua, necesario para habilitar el funcionamiento del sistema y reforzar la operación segura del manipulador.
+        <br><br>Como parte del enfoque de desarrollo, se priorizó el uso de materiales reciclados en la construcción física del prototipo, buscando optimizar recursos y demostrar la viabilidad de soluciones funcionales y accesibles dentro del ámbito académico y de automatización.
+        <br><br>El proyecto combina conceptos de robótica, control automático, cinemática y comunicación embebida, integrando hardware y software en una solución de automatización interactiva y funcional.</p>
     </div>
 
     <div class="list-tools">
-        <button class="skill-li">
-          <img src="img/skills/node.png">
-          <span class="">Node.js</span>
+      <span1>Herramientas Utilizadas</span1>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/arduino.png">
+          <span class="">IDE Arduino</span>
+        </button>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/c++.png">
+          <span class="">C++</span>
+        </button>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/python.png">
+          <span class="">Python</span>
+        </button>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/mathlab.png">
+          <span class="">Mathlab</span>
+        </button>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/electronica.png">
+          <span class="">Electronica</span>
+        </button>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/motor.png">
+          <span class="">Servomotores</span>
+        </button>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/solidworks.png">
+          <span class="">SolidWorks</span>
         </button>
     </div>
 
@@ -496,9 +528,30 @@ Integro conocimientos sólidos en electrónica, teoría de control, automatizaci
     </div>
 
     <div class="list-tools">
-        <button class="skill-li">
-          <img src="img/skills/node.png">
-          <span class="">Node.js</span>
+      <span1>Herramientas Utilizadas</span1>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/arduino.png">
+          <span class="">IDE Arduino</span>
+        </button>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/c++.png">
+          <span class="">C++</span>
+        </button>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/python.png">
+          <span class="">Python</span>
+        </button>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/electronica.png">
+          <span class="">Electronica</span>
+        </button>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/motor.png">
+          <span class="">Motores</span>
+        </button>
+        <button class="modal-skill-li" data-proj="">
+          <img src="img/skills/fusion.png">
+          <span class="">Autodesk Fusion</span>
         </button>
     </div>
 

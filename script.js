@@ -394,9 +394,9 @@ const imagenesModalMapaFids = [
   "img/mapaFidsC/mapaFids7.png"
 ];
 const imagenesModalBrazo = [
-  "img/mapaFidsC/mapaFids.jpg",
-  "img/mapaFidsC/mapaFids2.jpg",
-  "img/mapaFidsC/mapaFids3.jpg"
+  "img/brazoC/brazo.jpg",
+  "img/brazoC/brazo2.jpg",
+  "img/brazoC/brazo3.jpg"
 ];
 const imagenesModalCarro = [
   "img/mapaFidsC/mapaFids.jpg",
